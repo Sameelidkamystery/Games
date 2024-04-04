@@ -73,4 +73,8 @@ public final class tools {
             System.out.println("got interrupted!");
         }
     }
+
+    public static String getRandomFrom(String[] strings) {
+        return (strings[getRandomNumber(0, strings.length-1)]);
+    }
 }

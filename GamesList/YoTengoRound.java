@@ -8,6 +8,16 @@ public class YoTengoRound {
     public YoTengoRound(int difficulty, int round, int coins) {
         wager = Helper.tools.getRandomNumber(1, coins);
         chance = Helper.tools.getRandomNumber((int) Helper.tools.getRandomNumber( (int) 100/round, (int) 30/difficulty),99);
+
+        if (difficulty == 3) {
+            chance = Helper.tools.getRandomNumber((int) Helper.tools.getRandomNumber( (int) 100/round, (int) 30/difficulty),Helper.tools.getRandomNumber(60,Helper.tools.getRandomNumber(90,99)));
+        }
+        else if (difficulty == 2) {
+            chance = Helper.tools.getRandomNumber((int) Helper.tools.getRandomNumber( (int) 100/round, (int) 30/difficulty),Helper.tools.getRandomNumber(80,99));
+        }
+        else {
+            chance = Helper.tools.getRandomNumber((int) Helper.tools.getRandomNumber( (int) 100/round, (int) 30/difficulty),99);
+        }
         
         if (difficulty == 3) {
             multiplier = Helper.tools.getRandomNumber(2,Helper.tools.getRandomNumber(2,Helper.tools.getRandomNumber(3,4)));
